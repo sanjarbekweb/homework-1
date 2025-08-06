@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "name": "Wireless Headphones",
+        "price": 10.99,
+        "image": "/av1.avif",
+        "type": "Audio"
+    },
+    {
+        "id": 2,
+        "name": "Smart Watch",
+        "price": 12.99,
+        "image": "/av2.avif",
+        "type": "Wearable"
+    },
+    {
+        "id": 3,
+        "name": "Gaming Mouse",
+        "price": 14.99,
+        "image": "/av3.avif",
+        "type": "Peripheral"
+    },
+    {
+        "id": 4,
+        "name": "Mechanical Keyboard",
+        "price": 9.99,
+        "image": "/av4.avif",
+        "type": "Peripheral"
+    },
+    {
+        "id": 5,
+        "name": "4K Monitor",
+        "price": 19.99,
+        "image": "/av5.avif",
+        "type": "Display"
+    },
+    {
+        "id": 6,
+        "name": "External SSD 1TB",
+        "price": 15.99,
+        "image": "/av6.avif",
+        "type": "Storage"
+    },
+    {
+        "id": 7,
+        "name": "Bluetooth Speaker",
+        "price": 17.99,
+        "image": "/av7.avif",
+        "type": "Audio"
+    },
+    {
+        "id": 8,
+        "name": "Webcam HD",
+        "price": 11.99,
+        "image": "/av8.avif",
+        "type": "Peripheral"
+    },
+    {
+        "id": 9,
+        "name": "Portable Charger",
+        "price": 13.99,
+        "image": "/av9.avif",
+        "type": "Power"
+    },
+    {
+        "id": 10,
+        "name": "USB 2.0",
+        "price": 1.3,
+        "image": "/av10.avif",
+        "type": "Peripheral"
+    },
+    {
+        "id": 11,
+        "name": "microphone",
+        "price": 1.3,
+        "image": "/av11.avif",
+        "type": "Audio"
+    },
+    {
+        "id": 12,
+        "name": "Power Charger Pro",
+        "price": 15.00,
+        "image": "/av12.avif",
+        "type": "Power"
+    }
+]

@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: 0;
+  text-transform: none;
+  font-family: "Poppins";
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #B6B09F;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #8b877b;
+}
+
+:root {
+  background: #EAE4D5;
+  background: #202020;
+}
+
+body {
+  position: relative;
+}
+
+#app {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px;
+  position: relative;
+  z-index: 2;
+}
+.products .box {
+  max-height: 400px;
+  background-color: #B6B09F;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  position: relative;
+}
+.products .box:hover .info {
+  opacity: 1;
+}
+.products .box:hover img {
+  transform: scale(1.35, 1.35);
+}
+.products .box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform ease-in-out 130ms;
+  cursor: pointer;
+}
+.products .box .info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white !important;
+  opacity: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: opacity ease-in-out 130ms;
+  pointer-events: auto;
+}
+.products .box .info p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.products .box .info span {
+  font-weight: 600;
+}
+
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(10px) grayscale(50%);
+          backdrop-filter: blur(10px) grayscale(50%);
+  z-index: 60;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+.backdrop .modal {
+  width: 550px;
+  height: 550px;
+  background: #3e3e3e;
+  color: white;
+  border-radius: 15px;
+  display: flex;
+  gap: 15px;
+  padding: 30px 40px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.backdrop .modal img {
+  width: 70%;
+  max-height: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: left;
+}
+.backdrop .modal p {
+  font-size: 25px;
+}
+.backdrop .modal span {
+  font-weight: 600;
+  font-size: 20px;
+}
+.backdrop .modal button {
+  padding: 12px;
+  background-color: #EAE4D5;
+  background-color: #8b877b;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s;
+}
+.backdrop .modal button:hover {
+  background-color: #EAE4D5;
+  color: black;
+}
+
+.backdrop.active {
+  opacity: 1;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.backdrop.active .modal {
+  pointer-events: auto;
+  cursor: auto;
+}
+
+@media (max-width: 992px) {
+  .products {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+@media (max-width: 768px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 576px) {
+  .backdrop .modal {
+    width: 300px;
+    height: 350px;
+  }
+  .backdrop .modal p {
+    font-size: 20px;
+  }
+  .backdrop .modal span {
+    font-size: 15px;
+  }
+}
+@media (max-width: 400px) {
+  .products {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .backdrop .modal {
+    width: 200px;
+    min-height: 200px;
+    max-height: 250px;
+  }
+  .backdrop .modal p {
+    font-size: 10px;
+  }
+  .backdrop .modal span {
+    font-size: 8px;
+  }
+  .backdrop .modal button {
+    padding: 5px;
+    font-size: 8px;
+  }
+}/*# sourceMappingURL=style.css.map */
